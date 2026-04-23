@@ -1,0 +1,1 @@
+# snowflake-scd2-pipeline
