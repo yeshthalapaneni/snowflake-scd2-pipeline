@@ -1,0 +1,4 @@
+product_id,product_name,category,selling_price,model_number,about_product,product_specification,technical_details,shipping_weight
+101,Smartphone X,Electronics,699,MX100,Latest smartphone,6GB RAM 128GB Storage,Octa-core Processor,0.4
+102,Laptop Pro,Electronics,1299,LP200,High performance laptop,16GB RAM 512GB SSD,Intel i7 Processor,1.5
+103,Wireless Headphones,Accessories,199,WH300,Noise cancelling headphones,Bluetooth 5.0,20hr battery life,0.2
