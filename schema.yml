@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: transform_product_load
+    description: "Cleaned and standardized product data used as input for snapshot processing"
+
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+
+      - name: product_name
+      - name: category
+      - name: selling_price
+      - name: model_number
+      - name: about_product
+      - name: product_specification
+      - name: technical_details
+      - name: shipping_weight
+
+  - name: product_view
+    description: "Gold layer view exposing SCD Type 2 versioned product data"
+
+    columns:
+      - name: product_id
+        tests:
+          - not_null
+
+      - name: valid_from
+        tests:
+          - not_null
+
+      - name: valid_to
+
+      - name: is_current
+
+sources:
+  - name: raw
+    database: PC_DBT_DB
+    schema: BRONZE
+
+    tables:
+      - name: product_source
+        description: "Raw product data loaded from S3 into Snowflake"
